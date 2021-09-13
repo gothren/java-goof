@@ -1,0 +1,12 @@
+# https://support.snyk.io/hc/en-us/articles/360006368877-Scan-and-fix-security-issues-in-your-Kubernetes-configuration-files
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+  labels:
+    app: myapp
+spec:
+  containers:
+    - name: my-app-container
+      image: busybox
+      command: [ 'sh', '-c', 'echo Hello Kubernetes! && sleep 3600']
